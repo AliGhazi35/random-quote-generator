@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.main {
+    min-height: 100vh;
+    max-width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to right, rgb(25, 25, 82), rgb(25, 25, 102));
+    padding: 60px;
+}
+
+.section-1 {
+    background-color: white;
+    border-radius: 10px;
+    min-height: 300px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 0 20px;
+}
+
+.section-1 h1 {
+    font-family: "Space Mono", monospace;
+    text-align: center;
+    width: 300px;
+    line-height: 40px;
+}
+
+.section-1 p {
+    text-align: center;
+    color: rgb(37, 37, 37);
+}
+
+.section-1 button {
+    padding: 7px 20px;
+    font-size: 1rem;
+    background: transparent;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid black;
+    color: black;
+    font-weight: 500;
+    position: relative;
+    overflow: hidden;
+    z-index: 99;
+}
+
+.section-1 button::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -44px;
+    background-color: rgb(25, 25, 82);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    border-radius: 5px;
+    transition: all 0.5s ease;
+}
+
+.section-1 button:hover::after {
+    bottom: -0px;
+}
+
+.section-1 button:hover {
+    bottom: -0px;
+    color: white;
+
+}
+
+@media only screen and (max-width:549px) {
+    .section-1 {
+        width: 300px;
+    }
+
+}
